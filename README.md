@@ -1,6 +1,34 @@
-# ChatWithConstitution
-Chat with a document using Python, LangChain, QDrant, and LLM
+# StableDiffusionCharacterCreator
+Use generative AI to create characters for your projects
 
-This app loads a document, stores the embeddings in a vector datastore (QDrant in this example), and allows the user to chat with the document and ask it questions. The user's chat history is stored in the session, so it can be reset by using the Clear button or refreshing the browser. The app will display the relevent sections it found in the source text, with relevency scores.
+This app uses Stable Diffusion, StreamLit, and Python to create and easy-to-use interface for creating character profile images.
 
-You can see this app running live: https://chatwithconstitution-6myy7rsaxqbwpzrjxvwebk.streamlit.app/
+## Setup
+
+1. Follow the steps to setup a local instance of Stable Diffusion:
+https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+2. Make sure to use the --api flag when running the web server:
+```
+./webui.sh --api
+```
+
+OR 
+
+1.1 Find an instance of Stable Diffusion running out in the wild and hook up to it in the app.py file
+
+3. Clone this repo
+
+3. Use the "run and debug" button in VSCode to start the app
+
+OR 
+
+3.1 In your terminal use the command `streamlit run app.py`
+
+4. Type in a short description into the txt box and hit the "Create!" button
+
+5. Go get a cup of coffee
+
+6. Enjoy the generated profile pic! 
+
+The images created are stored in the `sdresults` folder, and images with background removed are stored in `nobackground`
