@@ -17,7 +17,7 @@ https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 OR 
 
-1.1 Find an instance of Stable Diffusion running out in the wild and hook up to it in the app.py file
+1 Find an instance of Stable Diffusion running out in the wild and hook up to it in the app.py file
 
 3. Download your models and put them in the correct place. The example here is using blue_pencil-XL, some other good models are DreamShaper and CyberRealistic
 
@@ -27,7 +27,7 @@ OR
 
 OR 
 
-5.1 In your terminal use the command `streamlit run app.py`
+5. In your terminal use the command `streamlit run app.py`
 
 6. Type in a short description into the txt box and hit the "Create!" button
 
