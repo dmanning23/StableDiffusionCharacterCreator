@@ -2,7 +2,7 @@
 import streamlit as st
 import webuiapi
 import uuid
-import rembg
+from rembg import new_session, remove
 
 def main():
     st.set_page_config(
@@ -14,6 +14,9 @@ def main():
     api = webuiapi.WebUIApi(host='127.0.0.1', port=7860)
     #api = webuiapi.WebUIApi(host='webui.example.com', port=443, use_https=True)
     
+    #setup rembg to use the anime filter
+    session = new_session("isnet-anime")
+
     container = st.container()
     with container:
         with st.form(key="my form", clear_on_submit=True):
@@ -29,7 +32,7 @@ def main():
                 st.write(f"Character Description: : {user_input}")
 
                 #Build the prompt
-                prompt = "game icon,mobile game ui,(head shot),((painterly)),black background,"
+                prompt = "game icon,mobile game ui,(head shot),((painterly)),white background,"
                 prompt += user_input
 
                 #create the character picture
@@ -46,7 +49,7 @@ def main():
                 result.image.save(sdfilename, "PNG")
 
                 #remove the background
-                output_image = rembg.remove(result.image)
+                output_image = remove(result.image, session=session)
 
                 #save the image to the nobackground folder
                 nbfilename = f"nobackground/{filename}"
