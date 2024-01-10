@@ -19,18 +19,20 @@ OR
 
 1.1 Find an instance of Stable Diffusion running out in the wild and hook up to it in the app.py file
 
-3. Clone this repo
+3. Download your models and put them in the correct place. The example here is using blue_pencil-XL, some other good models are DreamShaper and CyberRealistic
 
-3. Use the "run and debug" button in VSCode to start the app
+4. Clone this repo
+
+5. Use the "run and debug" button in VSCode to start the app
 
 OR 
 
-3.1 In your terminal use the command `streamlit run app.py`
+5.1 In your terminal use the command `streamlit run app.py`
 
-4. Type in a short description into the txt box and hit the "Create!" button
+6. Type in a short description into the txt box and hit the "Create!" button
 
-5. Go get a cup of coffee
+7. Go get a cup of coffee
 
-6. Enjoy the generated profile pic! 
+8. Enjoy the generated profile pic! 
 
 The images created are stored in the `sdresults` folder, and images with background removed are stored in `nobackground`

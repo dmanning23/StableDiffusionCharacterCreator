@@ -14,6 +14,8 @@ def main():
     api = webuiapi.WebUIApi(host='127.0.0.1', port=7860)
     #api = webuiapi.WebUIApi(host='webui.example.com', port=443, use_https=True)
     
+    #TODO: make sure stable diffusion is using the bluepencilXL model
+    
     #setup rembg to use the anime filter
     session = new_session("isnet-anime")
 
