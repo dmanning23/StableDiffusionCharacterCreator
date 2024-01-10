@@ -1,5 +1,9 @@
 apikey.py
 
+#ignore generated files
+sdresults/
+nobackground/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
