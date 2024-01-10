@@ -29,10 +29,10 @@ def main():
                 user_input = 'Calico Jack is a 28 year old male, " A flamboyant and carefree pirate, known for his colorful clothes and love for music. He often leads a band of musicians during village celebrations."'
                 
             with st.spinner("Thinking..."):
-                st.write(f"Character Description: : {user_input}")
+                st.write(f"Character Description: {user_input}")
 
                 #Build the prompt
-                prompt = "game icon,mobile game ui,(head shot),((painterly)),white background,"
+                prompt = "game icon,mobile game ui,(head shot),((painterly)),black background,"
                 prompt += user_input
 
                 #create the character picture
