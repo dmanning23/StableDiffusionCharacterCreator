@@ -14,10 +14,17 @@ def main():
     api = webuiapi.WebUIApi(host='127.0.0.1', port=7860)
     #api = webuiapi.WebUIApi(host='webui.example.com', port=443, use_https=True)
     
-    #TODO: make sure stable diffusion is using the bluepencilXL model
-    
-    #setup rembg to use the anime filter
-    session = new_session("isnet-anime")
+    #Set the model to be used by stable diffusion
+    options = {}
+    #Blue Pencil is a great model for anime characters
+    options['sd_model_checkpoint'] = 'bluePencilXL_v300.safetensors [2e29ce9ae7]' 
+    #The Dream Shaper model focuses on creating realistic looking characters and gives very consistent results
+    #options['sd_model_checkpoint'] = 'dreamshaper_8.safetensors [879db523c3]' 
+    api.set_options(options)
+
+    #Set the model to be used for removing the background of the image
+    session = new_session("isnet-anime") #This model pairs well with Blue Pencil
+    #session = new_session("u2net_human_seg") #This model pairs well with Dream Shaper
 
     container = st.container()
     with container:
