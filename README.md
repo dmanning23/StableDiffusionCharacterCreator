@@ -1,6 +1,8 @@
 # StableDiffusionCharacterCreator
 Use generative AI to create characters for your projects
 
+Type in a short description, and it will generate a character profile image and remove the background:
+
 ![Screenshot](./Screenshot.png)
 
 This app uses Stable Diffusion, StreamLit, and Python to create and easy-to-use interface for creating character profile images.
